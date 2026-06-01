@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -143,7 +143,7 @@
               <div>
                 <span class="text-[10px] text-slate-500 uppercase">// Visualizações no Instagram</span>
                 <div class="flex justify-between items-baseline mt-1">
-                  <span id="counter-views" class="text-3xl font-extrabold text-white tracking-tight">10.000+</span>
+                  <span id="counter-views" class="text-3xl font-extrabold text-white tracking-tight">30.000+</span>
                   <span class="text-xs text-purple-400">100% Orgânico</span>
                 </div>
                 <div class="w-full bg-slate-950 h-1.5 rounded mt-2 overflow-hidden">
@@ -389,7 +389,7 @@
               <span class="text-purple-400 font-mono text-xs tracking-widest uppercase">TRANSMISSÃO DIRETA</span>
               <h3 class="text-2xl font-black uppercase tracking-tight text-white font-mono">Canais de Contato</h3>
               <p class="text-slate-400 text-xs leading-relaxed">
-                Prefere uma conversa rápida no WhatsApp ou um contato direto no Instagram? Use nossos canais diretos para marcar uma call com nossa fundadora.
+                Prefere uma conversa rápida no WhatsApp, um contato profissional no LinkedIn ou por e-mail? Use nossos canais diretos para marcar uma call.
               </p>
             </div>
             <div class="space-y-4 font-mono text-xs">
@@ -406,6 +406,22 @@
                 <a href="https://instagram.com/galera.do.ti" target="_blank" class="text-white hover:text-cyan-400 text-sm font-bold flex items-center space-x-1">
                   <span>@galera.do.ti</span>
                   <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
+              </div>
+              <!-- Novo: LinkedIn Link -->
+              <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded flex flex-col space-y-1">
+                <span class="text-slate-500 text-[9px] uppercase">// LinkedIn Oficial</span>
+                <a href="https://www.linkedin.com/company/galera-do-ti/about/" target="_blank" class="text-white hover:text-cyan-400 text-sm font-bold flex items-center space-x-1">
+                  <span>company/galera-do-ti</span>
+                  <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400"></i>
+                </a>
+              </div>
+              <!-- Novo: E-mail Corporativo Link -->
+              <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded flex flex-col space-y-1">
+                <span class="text-slate-500 text-[9px] uppercase">// E-mail de Contato</span>
+                <a href="mailto:galeradotigti@gmail.com" class="text-white hover:text-cyan-400 text-sm font-bold flex items-center space-x-1">
+                  <span>galeradotigti@gmail.com</span>
+                  <i data-lucide="mail" class="w-3.5 h-3.5 text-cyan-400"></i>
                 </a>
               </div>
             </div>
@@ -558,6 +574,7 @@
       { name: "Gabriel Felipe", role: "Administrador" },
       { name: "Gabriel Marques", role: "Administrador" },
       { name: "Guilherme Jesus", role: "Administrador" },
+      
     ];
 
     // Initialize Page Content
@@ -662,30 +679,75 @@
       });
     }
 
-    // Dynamic Form Submission Handler
+    // Dynamic Form Submission Handler (Integrado com o FormSubmit.co)
     function handleFormSubmit(e) {
       e.preventDefault();
       
       const container = document.getElementById('form-container');
-      const randomId = Math.floor(Math.random() * 9000 + 1000);
+      const submitButton = e.target.querySelector('button[type="submit"]');
       
-      container.innerHTML = `
-        <div class="text-center py-12 space-y-6">
-          <div class="w-16 h-16 bg-cyan-950/40 border border-cyan-500/50 text-cyan-400 rounded-full flex items-center justify-center mx-auto animate-bounce">
-            <i data-lucide="check-circle-2" class="w-8 h-8"></i>
-          </div>
-          <div class="space-y-2">
-            <h4 class="text-lg font-mono font-bold text-white uppercase">Sinal de Proposta Recebido</h4>
-            <p class="text-xs font-mono text-slate-400 max-w-md mx-auto leading-relaxed">
-              Sua mensagem foi enviada diretamente para o nosso console de parcerias da comunidade. Retornamos em tempo recorde de compilação.
-            </p>
-          </div>
-          <div class="p-3 bg-[#060913] text-[9px] font-mono text-slate-500 border border-slate-900 rounded inline-block">
-            CODE_RESPONSE: #GTI-PARTNER-${randomId}
-          </div>
-        </div>
-      `;
+      const name = document.getElementById('form-name').value;
+      const company = document.getElementById('form-company').value;
+      const email = document.getElementById('form-email').value;
+      const message = document.getElementById('form-msg').value;
+
+      // Animação visual de envio "transmitting..."
+      submitButton.disabled = true;
+      submitButton.innerHTML = `<span>TRANSMITINDO...</span><i data-lucide="loader" class="w-4 h-4 animate-spin"></i>`;
       lucide.createIcons();
+
+      // Envia os dados via fetch em plano de fundo para o Gmail do TI
+      fetch("https://formsubmit.co/ajax/galeradotigti@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            Nome: name,
+            Empresa: company,
+            Email: email,
+            Mensagem: message
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        const randomId = Math.floor(Math.random() * 9000 + 1000);
+        container.innerHTML = `
+          <div class="text-center py-12 space-y-6">
+            <div class="w-16 h-16 bg-cyan-950/40 border border-cyan-500/50 text-cyan-400 rounded-full flex items-center justify-center mx-auto animate-bounce">
+              <i data-lucide="check-circle-2" class="w-8 h-8"></i>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-lg font-mono font-bold text-white uppercase">Sinal de Proposta Recebido</h4>
+              <p class="text-xs font-mono text-slate-400 max-w-md mx-auto leading-relaxed">
+                Sua proposta de parceria foi transmitida com sucesso para o e-mail central. Retornamos em tempo recorde de compilação.
+              </p>
+            </div>
+            <div class="p-3 bg-[#060913] text-[9px] font-mono text-slate-500 border border-slate-900 rounded inline-block">
+              CODE_RESPONSE: #GTI-PARTNER-${randomId}
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+      })
+      .catch(error => {
+        // Fallback em caso de erro de rede, exibe tela amigável
+        container.innerHTML = `
+          <div class="text-center py-12 space-y-6">
+            <div class="w-16 h-16 bg-red-950/40 border border-red-500/50 text-red-400 rounded-full flex items-center justify-center mx-auto">
+              <i data-lucide="alert-triangle" class="w-8 h-8"></i>
+            </div>
+            <div class="space-y-2">
+              <h4 class="text-lg font-mono font-bold text-white uppercase">Erro de Comunicação</h4>
+              <p class="text-xs font-mono text-slate-400 max-w-md mx-auto leading-relaxed">
+                Não conseguimos conectar com o servidor. Por favor, envie sua proposta diretamente para: <strong class="text-cyan-400">galeradotigti@gmail.com</strong>
+              </p>
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+      });
     }
   </script>
 </body>
