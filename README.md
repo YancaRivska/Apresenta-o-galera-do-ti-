@@ -1,74 +1,50 @@
-# Apresenta-o-galera-do-ti-
 
-⚡ COMUNIDADE GALERA DO TI ⚡
+⚡ GALERA DO TI
 
-“Se tem código, tem solução. Se não tem, a gente cria!”
+"If there is code, there is a solution. If not, we build it."
 
-🚀 Sobre a Galera do TI
+Galera do TI is a high-growth, zero-ego tech community connecting next-gen developers, tech students, and industry experts across Brazil. We break down corporate barriers to foster horizontal collaboration, peer mentorship, and real product development.
 
-A Galera do TI é uma comunidade nacional 100% online de tecnologia desenvolvida para conectar estudantes, profissionais em transição e especialistas experientes. Rompemos com o formalismo corporativo tradicional para criar um ecossistema com linguagem jovem, suporte horizontal e zero ego.
+📊 Our Numbers (First 30 Days)
 
-Em apenas 1 mês de existência, alcançamos a marca de mais de 1.000 membros altamente engajados de forma totalmente orgânica, além de obtermos mais de 10.000 visualizações em nossa página do Instagram.
+1,000+ Active Members (WhatsApp & Discord)
 
-🛠️ Nossos Hubs de Valor (Grupos Ativos)
+10,000+ Organic Instagram Views
 
-Nossos membros se organizam em mais de 20 grupos segmentados de acordo com seus objetivos práticos e bem-estar:
+20+ Specialized Tech Hubs
 
-TABERNA (Bar da T.I): O coração da nossa comunidade. Espaço livre de ego para desabafos, troca de histórias reais e descompressão após o expediente.
+100% Organic Grassroots Growth
 
-LABORATÓRIO (Criando Meu Portfólio): Apoio mútuo e reviews de código reais para construção de portfólios competitivos.
+🛠️ Key Ecosystem Hubs
 
-Git Push & Site Taberna: Sinergia colaborativa no desenvolvimento do nosso site institucional.
+Taberna (Tech Lounge): Post-work networking, honest conversations, and peer support.
 
-TI Girls (Só para Meninas): Espaço exclusivo para fomento, acolhimento e suporte profissional feminino.
+Laboratório (Portfolio Builder): Hands-on peer reviews and collaborative site building.
 
-TECH FIT RAT (GymRat do TI): Foco em saúde física, bem-estar e treinos para combater a rotina sedentária do dev.
+Dev Squads: Internal agile teams (#KITSUNE, #AXOLOTL-BYTE) building active tech projects.
 
-English in Practice: Grupo de conversação e prática focada em inglês para carreiras internacionais.
+Specialized Hubs: GymRat (health & wellness), English in Practice (global career prep), and TI Girls (women in tech).
 
-SQUAD INTERNAS DE DEV: Times exclusivos (#KITSUNE, #AXOLOTL-BYTE, #CAPY-TECH, #COFFEE-MONSTER) construindo soluções reais.
+🎯 Mission, Vision & Values
 
-🎯 Nossa Identidade de Base
+Mission: Democratize peer-to-peer tech support and accelerate tech careers through horizontal collaboration.
 
-📍 Missão
+Vision: Become the leading next-gen developer ecosystem in Brazil, expanding our strong São Paulo hub nationwide.
 
-Democratizar a conexão e o suporte técnico real no universo de TI do Brasil, impulsionando carreiras de base por meio da horizontalidade radical e da ajuda mútua sem culpa ou julgamento.
+Values: Zero-ego mentorship, radical authenticity (no BS), and builder-first pragmatism.
 
-📍 Visão
+🤝 Why Partner with Us?
 
-Ser o principal e mais engajado ecossistema de acolhimento técnico e descompressão de desenvolvedores da nova geração, expandindo nossa presença em São Paulo (Capital e Interior) para todo o território nacional.
+We don't do static banner ads. We offer organic, high-impact integration into a highly motivated developer network.
 
-📍 Valores
+Direct Access: Connect with active, early-career tech talent.
 
-Acolhimento sem ego
+Employer Branding: Establish your brand as a founding supporter of a grassroots community.
 
-Sinceridade radical (Sem mentiras e sem caô)
+Dynamic Engagement: Co-create value through code challenges, webinars, and targeted workshops.
 
-Pragmatismo técnico (Projetos de portfólio reais)
+📞 Connect with Us
 
-Destaque permanente a quem nos apoia no início
+Founder (Yanca): +55 19 99191-8817
 
-🤝 Por que se tornar um Parceiro Fundador?
-
-Como estamos em fase de estruturação e lançamento dos nossos canais de comunicação e portal oficial, as marcas, escolas de tecnologia e eventos parceiros que se conectarem conosco agora ganham o status de Co-Founder Partners.
-
-Inserção Contextualizada: Nada de anúncios invasivos. Sua marca participa das conversas e desafios de código organicamente.
-
-Visibilidade Vitalícia: Espaço reservado e exclusivo de destaque em nosso futuro site oficial.
-
-Engajamento de Base: Canal aberto direto com centenas de desenvolvedores ativos e motivados.
-
-⚡ Como Rodar o Projeto Localmente
-
-Clone este repositório:
-
-git clone [https://github.com/seu-usuario/galera-do-ti-site.git](https://github.com/seu-usuario/galera-do-ti-site.git)
-
-
-Abra o arquivo index.html em qualquer navegador para interagir com o portal.
-
-📞 Conecte-se com a gente!
-
-WhatsApp Fundadora (Yanca): +55 19 99191-8817
-
-Instagram Oficial: @galera.do.ti
+Instagram: @galera.do.ti
