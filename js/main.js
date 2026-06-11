@@ -18,7 +18,7 @@ const teamMembers = [
   { name: "Yanca Rivska", role: "Fundadora", img: "img/yanca.jpg" },
   { name: "Davi Fonseca", role: "Co-fundador", img: "img/davi.jpg" },
   { name: "Karolina Gusmão", role: "Administradora", img: "img/karol.jpg" },
-  { name: "Beatriz Soares", role: "Administradora", img: "" }, // Deixei em branco caso a Beatriz não tenha mandado a foto ainda
+  { name: "Beatriz Soares", role: "Administradora", img: "img/beatriz.jpg" },
   { name: "Gabriel Felipe", role: "Administrador", img: "img/gabrielfelipe.jpg" },
   { name: "Gabriel Marques", role: "Administrador", img: "img/gabrielmarques.jpg" },
   { name: "Guilherme Jesus", role: "Administrador", img: "img/guilherme.jpg" }
