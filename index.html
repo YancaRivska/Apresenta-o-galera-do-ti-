@@ -8,13 +8,14 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   
+  <!-- Novas Fontes: Inter (Texto), JetBrains Mono (Código), Playfair (Títulos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-[#060913] text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden relative min-h-screen font-mono-custom">
+<body class="bg-[#060913] text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden relative min-h-screen">
 
   <div class="absolute inset-0 bg-[linear-gradient(to_right,#0b1329_1px,transparent_1px),linear-gradient(to_bottom,#0b1329_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
   <div class="absolute top-20 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
@@ -27,15 +28,15 @@
         <div class="flex items-center space-x-3 cursor-pointer group" onclick="switchTab('home')">
           <div class="relative">
             <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded blur opacity-30 group-hover:opacity-60 transition-opacity"></div>
-            <div class="relative bg-[#0b0f19] border border-cyan-500/30 text-cyan-400 px-3 py-1.5 rounded font-bold tracking-widest text-sm">G_TI</div>
+            <div class="relative bg-[#0b0f19] border border-cyan-500/30 text-cyan-400 px-3 py-1.5 rounded font-mono-custom font-bold tracking-widest text-sm">G_TI</div>
           </div>
           <div>
             <span class="font-bold tracking-wider text-white">GALERA DO TI</span>
-            <span class="block text-[8px] tracking-[0.3em] text-cyan-500/60 uppercase">se tem código, tem solução.</span>
+            <span class="block text-[8px] font-mono-custom tracking-[0.3em] text-cyan-500/60 uppercase">se tem código, tem solução.</span>
           </div>
         </div>
 
-        <nav class="hidden lg:flex items-center space-x-1">
+        <nav class="hidden lg:flex items-center space-x-1 font-mono-custom">
           <button onclick="switchTab('home')" id="nav-home" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-cyan-400 border-b-2 border-cyan-400 transition-all">[ INÍCIO ]</button>
           <button onclick="switchTab('identidade')" id="nav-identidade" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all">[ MISSÃO & VALORES ]</button>
           <button onclick="switchTab('ecossistema')" id="nav-ecossistema" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all">[ ECOSSISTEMA ]</button>
@@ -44,14 +45,14 @@
         </nav>
 
         <div>
-          <button onclick="switchTab('contato')" class="btn-cyber rounded border border-cyan-500/50 px-5 py-2.5 text-xs text-cyan-400 hover:text-white transition-all font-bold tracking-widest">QUERO SER PARCEIRO</button>
+          <button onclick="switchTab('contato')" class="btn-cyber rounded border border-cyan-500/50 px-5 py-2.5 text-xs text-cyan-400 hover:text-white transition-all font-mono-custom font-bold tracking-widest">QUERO SER PARCEIRO</button>
         </div>
       </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full">
       
-      <div class="flex lg:hidden justify-start space-x-1 mb-8 bg-[#0b0f19] p-1.5 rounded border border-slate-800 overflow-x-auto custom-scrollbar">
+      <div class="flex lg:hidden justify-start space-x-1 mb-8 bg-[#0b0f19] p-1.5 rounded border border-slate-800 overflow-x-auto custom-scrollbar font-mono-custom">
         <button onclick="switchTab('home')" id="mob-home" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0">INÍCIO</button>
         <button onclick="switchTab('identidade')" id="mob-identidade" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0">VALORES</button>
         <button onclick="switchTab('ecossistema')" id="mob-ecossistema" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0">ECOSSISTEMA</button>
@@ -68,7 +69,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center space-x-2 bg-cyan-950/40 border border-cyan-500/20 px-3 py-1.5 rounded text-cyan-400 text-[10px] tracking-widest uppercase">
+            <div class="inline-flex items-center space-x-2 bg-cyan-950/40 border border-cyan-500/20 px-3 py-1.5 rounded text-cyan-400 text-[10px] tracking-widest uppercase font-mono-custom">
               <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping mr-1"></span>
               Apenas 1 mês de existência — Crescimento Exponencial
             </div>
@@ -76,7 +77,7 @@
               COMUNIDADE <br>
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">GALERA DO TI</span>
             </h1>
-            <p class="text-slate-400 text-sm sm:text-base leading-relaxed font-light font-sans">
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed font-light">
               A gente criou o que realmente faltava no mundo da tecnologia: um ecossistema real de jovens tech onde se pode pedir ajuda sem vergonha, sem ego corporativo e sem falsas mentiras do mercado. Nós unimos a nova geração de ponta a ponta.
             </p>
             <div class="p-4 bg-[#0b0f19] border-l-4 border-cyan-400 rounded-r text-xs text-slate-300 italic">
@@ -91,14 +92,14 @@
                 <span class="w-3 h-3 rounded-full bg-[#ffbd2e]"></span>
                 <span class="w-3 h-3 rounded-full bg-[#27c93f]"></span>
               </div>
-              <span class="text-[9px] text-slate-500 uppercase tracking-wider">TI_CORE_STATISTICS.TXT</span>
+              <span class="text-[9px] text-slate-500 uppercase tracking-wider font-mono-custom">TI_CORE_STATISTICS.TXT</span>
             </div>
-            <div class="space-y-6">
+            <div class="space-y-6 font-mono-custom">
               <div>
                 <span class="text-[10px] text-slate-500 uppercase">// Membros Ativos</span>
                 <div class="flex justify-between items-baseline mt-1">
                   <span class="text-3xl font-editorial font-bold text-white tracking-tight">1.000+</span>
-                  <span class="text-xs text-cyan-400 font-sans">WhatsApp / Discord</span>
+                  <span class="text-xs text-cyan-400">WhatsApp / Discord</span>
                 </div>
                 <div class="w-full bg-slate-950 h-1.5 rounded mt-2 overflow-hidden">
                   <div class="bg-cyan-500 h-full rounded w-full"></div>
@@ -108,7 +109,7 @@
                 <span class="text-[10px] text-slate-500 uppercase">// Visualizações no Insta</span>
                 <div class="flex justify-between items-baseline mt-1">
                   <span class="text-3xl font-editorial font-bold text-white tracking-tight">30.000+</span>
-                  <span class="text-xs text-purple-400 font-sans">100% Orgânico</span>
+                  <span class="text-xs text-purple-400">100% Orgânico</span>
                 </div>
                 <div class="w-full bg-slate-950 h-1.5 rounded mt-2 overflow-hidden">
                   <div class="bg-purple-500 h-full rounded w-full"></div>
@@ -126,25 +127,25 @@
           <div class="absolute inset-0 bg-gradient-to-t from-[#060913] to-transparent"></div>
         </div>
         <div class="text-center max-w-3xl mx-auto space-y-3">
-          <span class="text-cyan-400 text-xs tracking-widest uppercase">NOSSAS COORDENADAS</span>
+          <span class="text-cyan-400 text-xs tracking-widest uppercase font-mono-custom">NOSSAS COORDENADAS</span>
           <h2 class="text-3xl sm:text-4xl font-editorial font-bold uppercase text-white">O DNA DA COMUNIDADE</h2>
-          <p class="text-slate-400 text-sm font-sans">Conectamos de forma honesta, real e transparente.</p>
+          <p class="text-slate-400 text-sm">Conectamos de forma honesta, real e transparente.</p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch pt-6">
           <div class="bg-[#0b0f19] border border-slate-800 rounded-lg p-8 space-y-4 hover:border-cyan-500/40 transition-all group">
             <div class="p-3 bg-cyan-950/30 text-cyan-400 rounded-lg w-fit group-hover:scale-110 transition-transform"><i data-lucide="target" class="w-6 h-6"></i></div>
             <h3 class="text-xl font-editorial font-bold text-white uppercase tracking-wider">Missão</h3>
-            <p class="text-slate-400 text-xs leading-relaxed font-sans">Conectar estudantes e profissionais de tecnologia de todo o Brasil, impulsionando a entrada de novos talentos e a criação prática de produtos e portfólios reais dentro de um ecossistema 100% colaborativo.</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Conectar estudantes e profissionais de tecnologia de todo o Brasil, impulsionando a entrada de novos talentos e a criação prática de produtos e portfólios reais dentro de um ecossistema 100% colaborativo.</p>
           </div>
           <div class="bg-[#0b0f19] border border-slate-800 rounded-lg p-8 space-y-4 hover:border-purple-500/40 transition-all group">
             <div class="p-3 bg-purple-950/30 text-purple-400 rounded-lg w-fit group-hover:scale-110 transition-transform"><i data-lucide="compass" class="w-6 h-6"></i></div>
             <h3 class="text-xl font-editorial font-bold text-white uppercase tracking-wider">Visão</h3>
-            <p class="text-slate-400 text-xs leading-relaxed font-sans">Consolidar-se como o maior ecossistema online de inovação, descompressão e amparo real ao profissional de tecnologia iniciante e intermediário.</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Consolidar-se como o maior ecossistema online de inovação, descompressão e amparo real ao profissional de tecnologia iniciante e intermediário.</p>
           </div>
           <div class="bg-[#0b0f19] border border-slate-800 rounded-lg p-8 space-y-4 hover:border-indigo-500/40 transition-all group">
             <div class="p-3 bg-indigo-950/30 text-indigo-400 rounded-lg w-fit group-hover:scale-110 transition-transform"><i data-lucide="shield" class="w-6 h-6"></i></div>
             <h3 class="text-xl font-editorial font-bold text-white uppercase tracking-wider">Valores</h3>
-            <p class="text-slate-400 text-xs leading-relaxed font-sans">Acolhimento sem ego, integridade radical, pragmatismo focado em criação de portfólio prático, respeito mútuo e descontração transparente.</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Acolhimento sem ego, integridade radical, pragmatismo focado em criação de portfólio prático, respeito mútuo e descontração transparente.</p>
           </div>
         </div>
       </section>
@@ -156,20 +157,20 @@
           <div class="absolute inset-0 bg-gradient-to-t from-[#060913] to-transparent"></div>
         </div>
         <div class="text-center max-w-2xl mx-auto space-y-3">
-          <span class="text-purple-400 text-xs tracking-widest uppercase">A REDE CONECTADA</span>
+          <span class="text-purple-400 text-xs tracking-widest uppercase font-mono-custom">A REDE CONECTADA</span>
           <h2 class="text-3xl font-editorial font-bold uppercase text-white">20 Grupos Temáticos</h2>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           <div class="lg:col-span-5 space-y-2 h-[450px] overflow-y-auto pr-2 custom-scrollbar" id="groups-list"></div>
           <div class="lg:col-span-7 bg-[#0b0f19] border border-slate-800 rounded-lg p-8 min-h-[350px] flex flex-col justify-between relative overflow-hidden">
-            <div class="absolute top-0 right-0 p-4"><span class="text-[9px] bg-cyan-950/40 border border-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded uppercase">PRODUTO ATIVO</span></div>
+            <div class="absolute top-0 right-0 p-4"><span class="text-[9px] bg-cyan-950/40 border border-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded uppercase font-mono-custom">PRODUTO ATIVO</span></div>
             <div class="space-y-6 z-10">
               <div class="space-y-2">
-                <span class="text-[10px] tracking-widest text-slate-500 uppercase">// Seleção Atual</span>
+                <span class="text-[10px] tracking-widest text-slate-500 uppercase font-mono-custom">// Seleção Atual</span>
                 <h3 id="detail-title" class="text-3xl font-editorial font-bold text-white uppercase tracking-wide"></h3>
-                <span id="detail-badge" class="inline-block px-3 py-1 bg-slate-900 border border-slate-700 rounded text-[10px] text-cyan-400 uppercase tracking-widest"></span>
+                <span id="detail-badge" class="inline-block px-3 py-1 bg-slate-900 border border-slate-700 rounded text-[10px] text-cyan-400 uppercase tracking-widest font-mono-custom"></span>
               </div>
-              <p id="detail-desc" class="text-slate-300 text-sm leading-relaxed font-sans"></p>
+              <p id="detail-desc" class="text-slate-300 text-sm leading-relaxed"></p>
             </div>
             <i data-lucide="cpu" class="absolute -bottom-10 -right-10 w-64 h-64 text-slate-900/30 -z-0"></i>
           </div>
@@ -183,24 +184,24 @@
           <div class="absolute inset-0 bg-gradient-to-t from-[#060913] to-transparent"></div>
         </div>
         <div class="text-center max-w-3xl mx-auto space-y-4">
-          <span class="text-cyan-400 text-xs tracking-widest uppercase">CRESCER JUNTO DA BASE</span>
+          <span class="text-cyan-400 text-xs tracking-widest uppercase font-mono-custom">CRESCER JUNTO DA BASE</span>
           <h2 class="text-3xl sm:text-4xl font-editorial font-bold uppercase text-white">Por Que Apoiar a Gente?</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch pt-6">
           <div class="bg-gradient-to-b from-[#0b0f19] to-[#060913] border-t-2 border-cyan-500/50 p-8 rounded-lg space-y-4 shadow-lg hover:-translate-y-2 transition-transform">
             <div class="text-4xl font-editorial font-bold text-slate-800">01</div>
             <h4 class="text-cyan-400 text-sm font-bold tracking-wider uppercase border-b border-slate-800 pb-2">Acesso ao Nicho Quente</h4>
-            <p class="text-slate-400 text-xs font-sans leading-relaxed">Sua marca se conecta com estudantes altamente dedicados, profissionais em transição e seniores reais. Nada de leads frios.</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Sua marca se conecta com estudantes altamente dedicados, profissionais em transição e seniores reais. Nada de leads frios.</p>
           </div>
           <div class="bg-gradient-to-b from-[#0b0f19] to-[#060913] border-t-2 border-purple-500/50 p-8 rounded-lg space-y-4 shadow-lg hover:-translate-y-2 transition-transform">
             <div class="text-4xl font-editorial font-bold text-slate-800">02</div>
             <h4 class="text-purple-400 text-sm font-bold tracking-wider uppercase border-b border-slate-800 pb-2">Branding Vitalício</h4>
-            <p class="text-slate-400 text-xs font-sans leading-relaxed">Estamos desenvolvendo nosso site oficial "Taberna". Quem fechar parceria agora garante destaque permanente na história da fundação.</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Estamos desenvolvendo nosso site oficial "Taberna". Quem fechar parceria agora garante destaque permanente na história da fundação.</p>
           </div>
           <div class="bg-gradient-to-b from-[#0b0f19] to-[#060913] border-t-2 border-indigo-500/50 p-8 rounded-lg space-y-4 shadow-lg hover:-translate-y-2 transition-transform">
             <div class="text-4xl font-editorial font-bold text-slate-800">03</div>
             <h4 class="text-indigo-400 text-sm font-bold tracking-wider uppercase border-b border-slate-800 pb-2">Engajamento Dinâmico</h4>
-            <p class="text-slate-400 text-xs font-sans leading-relaxed">Crie desafios de código para nossas equipes, workshops patrocinados ou sorteios estruturados. Falamos a língua da nova geração.</p>
+            <p class="text-slate-400 text-xs leading-relaxed">Crie desafios de código para nossas equipes, workshops patrocinados ou sorteios estruturados. Falamos a língua da nova geração.</p>
           </div>
         </div>
       </section>
@@ -213,34 +214,67 @@
         </div>
         <div class="space-y-8">
           <div class="text-center max-w-2xl mx-auto space-y-3">
-            <span class="text-cyan-400 text-xs tracking-widest uppercase">CONSTRUÇÃO COLETIVA</span>
+            <span class="text-cyan-400 text-xs tracking-widest uppercase font-mono-custom">CONSTRUÇÃO COLETIVA</span>
             <h2 class="text-3xl font-editorial font-bold uppercase text-white">Os Cofounders</h2>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="team-list"></div>
         </div>
+        
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start border-t border-slate-900 pt-16">
           <div class="lg:col-span-5 space-y-6">
             <h3 class="text-2xl font-editorial font-bold uppercase tracking-wide text-white">Transmissão Direta</h3>
-            <div class="space-y-4 text-xs">
-              <div class="p-5 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-cyan-500/30 transition-colors">
+            <p class="text-slate-400 text-sm mb-6">Conecte-se com a nossa rede através de qualquer terminal abaixo.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 text-xs font-mono-custom">
+              
+              <!-- Discord -->
+              <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-indigo-500/50 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all group">
+                <span class="text-slate-500 text-[9px] uppercase">// Hub Principal</span>
+                <a href="https://discord.gg/egXRzswK" target="_blank" class="text-white group-hover:text-indigo-400 text-sm font-bold mt-1 flex items-center space-x-2 transition-colors">
+                  <i data-lucide="message-square" class="w-4 h-4"></i><span>Servidor Discord</span>
+                </a>
+              </div>
+
+              <!-- YouTube -->
+              <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-red-500/50 hover:shadow-[0_0_15px_rgba(239,68,68,0.2)] transition-all group">
+                <span class="text-slate-500 text-[9px] uppercase">// Conteúdo Tech</span>
+                <a href="https://www.youtube.com/@GaleradoTI" target="_blank" class="text-white group-hover:text-red-400 text-sm font-bold mt-1 flex items-center space-x-2 transition-colors">
+                  <i data-lucide="youtube" class="w-4 h-4"></i><span>@GaleradoTI</span>
+                </a>
+              </div>
+
+              <!-- Telegram -->
+              <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.2)] transition-all group">
+                <span class="text-slate-500 text-[9px] uppercase">// Avisos Rápidos</span>
+                <a href="https://t.me/galeradoti" target="_blank" class="text-white group-hover:text-blue-400 text-sm font-bold mt-1 flex items-center space-x-2 transition-colors">
+                  <i data-lucide="send" class="w-4 h-4"></i><span>t.me/galeradoti</span>
+                </a>
+              </div>
+
+              <!-- Threads & Instagram -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-white/40 transition-all group">
+                  <span class="text-slate-500 text-[9px] uppercase">// Microblog</span>
+                  <a href="https://www.threads.net/@galeradoti" target="_blank" class="text-white group-hover:text-slate-300 text-sm font-bold mt-1 flex items-center space-x-2 transition-colors">
+                    <i data-lucide="at-sign" class="w-4 h-4"></i><span>Threads</span>
+                  </a>
+                </div>
+                <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-purple-500/40 transition-all group">
+                  <span class="text-slate-500 text-[9px] uppercase">// Instagram</span>
+                  <a href="https://instagram.com/galera.do.ti" target="_blank" class="text-white group-hover:text-purple-400 text-sm font-bold mt-1 flex items-center space-x-2 transition-colors">
+                    <i data-lucide="instagram" class="w-4 h-4"></i><span>Instagram</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="p-4 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-green-500/40 transition-all group">
                 <span class="text-slate-500 text-[9px] uppercase">// Fundadora Geral</span>
-                <span class="text-white font-bold text-sm block mt-1">Yanca</span>
-                <a href="https://wa.me/5519991918817" target="_blank" class="text-cyan-400 hover:text-cyan-300 mt-2 inline-flex items-center space-x-2">
-                  <i data-lucide="smartphone" class="w-4 h-4"></i><span>WhatsApp Co-founder</span>
+                <a href="https://wa.me/5519991918817" target="_blank" class="text-white group-hover:text-green-400 text-sm font-bold mt-1 flex items-center space-x-2 transition-colors">
+                  <i data-lucide="smartphone" class="w-4 h-4"></i><span>WhatsApp Yanca</span>
                 </a>
               </div>
-              <div class="p-5 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-purple-500/30 transition-colors">
-                <span class="text-slate-500 text-[9px] uppercase">// Instagram</span>
-                <a href="https://instagram.com/galera.do.ti" target="_blank" class="text-white hover:text-purple-400 text-sm font-bold mt-1 flex items-center space-x-2">
-                  <i data-lucide="instagram" class="w-4 h-4"></i><span>@galera.do.ti</span>
-                </a>
-              </div>
-              <div class="p-5 bg-[#0b0f19] border border-slate-800 rounded-lg shadow-lg hover:border-cyan-500/30 transition-colors">
-                <span class="text-slate-500 text-[9px] uppercase">// E-mail Corporativo</span>
-                <a href="mailto:galeradotigti@gmail.com" class="text-white hover:text-cyan-400 text-sm font-bold mt-1 flex items-center space-x-2">
-                  <i data-lucide="mail" class="w-4 h-4"></i><span>galeradotigti@gmail.com</span>
-                </a>
-              </div>
+
             </div>
           </div>
           <div class="lg:col-span-7 bg-[#0b0f19] border border-slate-800 rounded-lg p-8 shadow-xl relative" id="form-container">
@@ -248,21 +282,46 @@
             <form onsubmit="handleFormSubmit(event)" class="space-y-6 mt-2">
               <div>
                 <h4 class="text-lg font-editorial font-bold text-white uppercase">Abrir Conexão</h4>
-                <p class="text-slate-400 text-xs font-sans mt-1">Preencha os dados e entraremos em contato.</p>
+                <p class="text-slate-400 text-xs mt-1">Preencha os dados e entraremos em contato.</p>
               </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 font-mono-custom">
                 <div class="space-y-1.5"><label class="block text-[10px] uppercase text-slate-400">Seu Nome</label><input type="text" id="form-name" required class="w-full bg-[#060913] border border-slate-800 focus:border-cyan-500 rounded p-3 text-sm text-slate-200 focus:outline-none transition-colors"></div>
                 <div class="space-y-1.5"><label class="block text-[10px] uppercase text-slate-400">Empresa / Marca</label><input type="text" id="form-company" required class="w-full bg-[#060913] border border-slate-800 focus:border-cyan-500 rounded p-3 text-sm text-slate-200 focus:outline-none transition-colors"></div>
               </div>
-              <div class="space-y-1.5"><label class="block text-[10px] uppercase text-slate-400">E-mail Corporativo</label><input type="email" id="form-email" required class="w-full bg-[#060913] border border-slate-800 focus:border-cyan-500 rounded p-3 text-sm text-slate-200 focus:outline-none transition-colors"></div>
-              <div class="space-y-1.5"><label class="block text-[10px] uppercase text-slate-400">Como você planeja nos apoiar?</label><textarea id="form-msg" rows="4" required class="w-full bg-[#060913] border border-slate-800 focus:border-cyan-500 rounded p-3 text-sm text-slate-200 focus:outline-none transition-colors resize-none"></textarea></div>
-              <button type="submit" class="btn-cyber w-full py-4 bg-cyan-500/10 border border-cyan-500 text-cyan-400 hover:text-white font-bold text-xs tracking-widest uppercase rounded flex items-center justify-center space-x-2"><span>ENVIAR PROPOSTA</span><i data-lucide="send" class="w-4 h-4"></i></button>
+              <div class="space-y-1.5 font-mono-custom"><label class="block text-[10px] uppercase text-slate-400">E-mail Corporativo</label><input type="email" id="form-email" required class="w-full bg-[#060913] border border-slate-800 focus:border-cyan-500 rounded p-3 text-sm text-slate-200 focus:outline-none transition-colors"></div>
+              <div class="space-y-1.5 font-mono-custom"><label class="block text-[10px] uppercase text-slate-400">Como você planeja nos apoiar?</label><textarea id="form-msg" rows="4" required class="w-full bg-[#060913] border border-slate-800 focus:border-cyan-500 rounded p-3 text-sm text-slate-200 focus:outline-none transition-colors resize-none"></textarea></div>
+              <button type="submit" class="btn-cyber w-full py-4 bg-cyan-500/10 border border-cyan-500 text-cyan-400 hover:text-white font-bold text-xs tracking-widest uppercase rounded flex items-center justify-center space-x-2 font-mono-custom"><span>ENVIAR PROPOSTA</span><i data-lucide="send" class="w-4 h-4"></i></button>
             </form>
           </div>
         </div>
       </section>
 
     </main>
+
+    <!-- Cybernetic Footer -->
+    <footer class="border-t border-slate-900 bg-[#060913] py-10 px-4 mt-auto">
+      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+        <div class="space-y-1 text-center lg:text-left">
+          <span class="font-editorial text-lg font-bold tracking-wider text-white">GALERA DO TI</span>
+          <p class="text-[9px] font-mono-custom text-slate-500 uppercase tracking-widest">
+            SE TEM CÓDIGO, TEM SOLUÇÃO.
+          </p>
+        </div>
+        
+        <!-- Social Icons Row -->
+        <div class="flex space-x-5">
+          <a href="https://discord.gg/egXRzswK" target="_blank" class="text-slate-500 hover:text-indigo-400 transition-colors transform hover:scale-110"><i data-lucide="message-square" class="w-5 h-5"></i></a>
+          <a href="https://www.youtube.com/@GaleradoTI" target="_blank" class="text-slate-500 hover:text-red-500 transition-colors transform hover:scale-110"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          <a href="https://instagram.com/galera.do.ti" target="_blank" class="text-slate-500 hover:text-purple-400 transition-colors transform hover:scale-110"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+          <a href="https://www.threads.net/@galeradoti" target="_blank" class="text-slate-500 hover:text-white transition-colors transform hover:scale-110"><i data-lucide="at-sign" class="w-5 h-5"></i></a>
+          <a href="https://t.me/galeradoti" target="_blank" class="text-slate-500 hover:text-blue-400 transition-colors transform hover:scale-110"><i data-lucide="send" class="w-5 h-5"></i></a>
+        </div>
+
+        <div class="text-[10px] font-mono-custom text-slate-600">
+          &copy; 2026 GALERA DO TI. TODOS OS DIREITOS RESERVADOS.
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="js/main.js"></script>
