@@ -15,13 +15,13 @@ const groupsData = {
 };
 
 const teamMembers = [
-  { name: "Yanca Rivska", role: "Fundadora", img: "yanca.jpg" },
-  { name: "Davi Fonseca", role: "Co-fundador", img: "davi.jpg" },
-  { name: "Karolina Gusmão", role: "Administradora", img: "karolina.jpg" },
-  { name: "Beatriz Soares", role: "Administradora", img: "" },
-  { name: "Gabriel Felipe", role: "Administrador", img: "" },
-  { name: "Gabriel Marques", role: "Administrador", img: "" },
-  { name: "Guilherme Jesus", role: "Administrador", img: "" }
+  { name: "Yanca Rivska", role: "Fundadora", img: "img/yanca.jpg" },
+  { name: "Davi Fonseca", role: "Co-fundador", img: "img/davi.jpg" },
+  { name: "Karolina Gusmão", role: "Administradora", img: "img/karol.jpg" },
+  { name: "Beatriz Soares", role: "Administradora", img: "" }, // Deixei em branco caso a Beatriz não tenha mandado a foto ainda
+  { name: "Gabriel Felipe", role: "Administrador", img: "img/gabrielfelipe.jpg" },
+  { name: "Gabriel Marques", role: "Administrador", img: "img/gabrielmarques.jpg" },
+  { name: "Guilherme Jesus", role: "Administrador", img: "img/guilherme.jpg" }
 ];
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -37,14 +37,14 @@ function switchTab(tabId) {
   document.getElementById(`tab-${tabId}`).classList.remove('hidden');
 
   document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.className = "nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all";
+    btn.className = "nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all font-mono-custom";
   });
-  document.getElementById(`nav-${tabId}`).className = "nav-btn px-4 py-2 text-xs tracking-wider uppercase text-cyan-400 border-b-2 border-cyan-400 transition-all font-bold";
+  document.getElementById(`nav-${tabId}`).className = "nav-btn px-4 py-2 text-xs tracking-wider uppercase text-cyan-400 border-b-2 border-cyan-400 transition-all font-bold font-mono-custom";
 
   document.querySelectorAll('.mob-btn').forEach(btn => {
-    btn.className = "mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0";
+    btn.className = "mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0 font-mono-custom";
   });
-  document.getElementById(`mob-${tabId}`).className = "mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0 font-bold";
+  document.getElementById(`mob-${tabId}`).className = "mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0 font-bold font-mono-custom";
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -63,7 +63,7 @@ function renderGroupsList() {
         <div class="p-2 bg-slate-900 rounded-md group-hover:bg-cyan-950/30 transition-colors">
           <i data-lucide="${item.icon}" class="w-5 h-5 text-cyan-400"></i>
         </div>
-        <span class="text-xs font-bold uppercase text-slate-300 group-hover:text-cyan-400 transition-colors">${item.title}</span>
+        <span class="text-xs font-bold uppercase text-slate-300 group-hover:text-cyan-400 transition-colors font-mono-custom">${item.title}</span>
       </div>
       <i data-lucide="chevron-right" class="w-4 h-4 text-slate-600 group-hover:text-cyan-400"></i>
     `;
@@ -106,7 +106,7 @@ function renderTeamList() {
     card.innerHTML = `
       ${avatarHTML}
       <h4 class="text-sm font-bold text-white tracking-wide">${member.name}</h4>
-      <span class="text-[10px] text-slate-500 block mt-1 uppercase tracking-widest">${member.role}</span>
+      <span class="text-[10px] text-slate-500 block mt-1 uppercase tracking-widest font-mono-custom">${member.role}</span>
     `;
     
     container.appendChild(card);
@@ -139,7 +139,7 @@ function handleFormSubmit(e) {
           <i data-lucide="check-circle-2" class="w-8 h-8"></i>
         </div>
         <h4 class="text-2xl font-editorial font-bold text-white uppercase">Sinal Recebido</h4>
-        <p class="text-xs text-slate-400 max-w-md mx-auto font-sans">Retornaremos em tempo recorde de compilação.</p>
+        <p class="text-xs text-slate-400 max-w-md mx-auto font-mono-custom">Retornaremos em tempo recorde de compilação.</p>
       </div>
     `;
     lucide.createIcons();
@@ -151,7 +151,7 @@ function handleFormSubmit(e) {
           <i data-lucide="alert-triangle" class="w-8 h-8"></i>
         </div>
         <h4 class="text-2xl font-editorial font-bold text-white uppercase">Erro na Conexão</h4>
-        <p class="text-xs text-slate-400 max-w-md mx-auto font-sans">Envie e-mail direto para: <strong class="text-cyan-400">galeradotigti@gmail.com</strong></p>
+        <p class="text-xs text-slate-400 max-w-md mx-auto font-mono-custom">Envie e-mail direto para: <strong class="text-cyan-400">galeradotigti@gmail.com</strong></p>
       </div>
     `;
     lucide.createIcons();
