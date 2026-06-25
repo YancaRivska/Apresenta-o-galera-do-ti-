@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galera do TI - Ecossistema</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#060913] text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 overflow-x-hidden relative min-h-screen">
+
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#0b1329_1px,transparent_1px),linear-gradient(to_bottom,#0b1329_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
+  <div class="absolute top-20 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+  <div class="absolute top-1/2 right-10 w-[450px] h-[450px] bg-purple-500/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+
+  <div class="relative z-10 flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#060913]/90 border-b border-cyan-500/10 px-4 py-4">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+
+        <a href="index.html" class="flex items-center space-x-3 cursor-pointer group">
+          <div class="relative">
+            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded blur opacity-30 group-hover:opacity-60 transition-opacity"></div>
+            <div class="relative bg-[#0b0f19] border border-cyan-500/30 text-cyan-400 px-3 py-1.5 rounded font-mono-custom font-bold tracking-widest text-sm">
+              G_TI
+            </div>
+          </div>
+
+          <div>
+            <span class="font-bold tracking-wider text-white">GALERA DO TI</span>
+            <span class="block text-[8px] font-mono-custom tracking-[0.3em] text-cyan-500/60 uppercase">
+              se tem código, tem solução.
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-1 font-mono-custom">
+          <a href="index.html" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all">
+            [ INÍCIO ]
+          </a>
+
+          <a href="missao-valores.html" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all">
+            [ MISSÃO & VALORES ]
+          </a>
+
+          <a href="ecossistema.html" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-cyan-400 border-b-2 border-cyan-400 transition-all">
+            [ ECOSSISTEMA ]
+          </a>
+
+          <a href="parceria.html" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all">
+            [ POR QUE APOIAR? ]
+          </a>
+
+          <a href="cofounders.html" class="nav-btn px-4 py-2 text-xs tracking-wider uppercase text-slate-400 hover:text-slate-100 transition-all">
+            [ CO-FOUNDER ]
+          </a>
+        </nav>
+
+        <div>
+          <a href="cofounders.html" class="btn-cyber rounded border border-cyan-500/50 px-5 py-2.5 text-xs text-cyan-400 hover:text-white transition-all font-mono-custom font-bold tracking-widest">
+            QUERO SER PARCEIRO
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 flex-grow w-full">
+      
+      <div class="flex lg:hidden justify-start space-x-1 mb-8 bg-[#0b0f19] p-1.5 rounded border border-slate-800 overflow-x-auto custom-scrollbar font-mono-custom">
+        <a href="index.html" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0">
+          INÍCIO
+        </a>
+
+        <a href="missao-valores.html" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0">
+          VALORES
+        </a>
+
+        <a href="ecossistema.html" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0">
+          ECOSSISTEMA
+        </a>
+
+        <a href="parceria.html" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0">
+          APOIAR
+        </a>
+
+        <a href="cofounders.html" class="mob-btn px-4 py-2 text-[10px] uppercase tracking-wider rounded text-slate-400 shrink-0">
+          CO-FOUNDER
+        </a>
+      </div>
+
+      <section class="tab-content animate-fade-in space-y-12">
+
+        <div class="w-full rounded-lg overflow-hidden relative banner-container border border-cyan-500/20 shadow-[0_0_30px_rgba(6,182,212,0.1)]">
+          <img src="img/banner-eco.jpg" alt="Ecossistema" class="w-full h-auto banner-img opacity-80">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#060913] via-transparent to-transparent pointer-events-none"></div>
+        </div>
+
+        <div class="text-center max-w-2xl mx-auto space-y-3">
+          <span class="text-purple-400 text-xs tracking-widest uppercase font-mono-custom">
+            A REDE CONECTADA
+          </span>
+
+          <h2 class="text-3xl font-editorial font-bold uppercase text-white">
+            20 Grupos Temáticos
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <div class="lg:col-span-5 space-y-2 h-[450px] overflow-y-auto pr-2 custom-scrollbar" id="groups-list"></div>
+
+          <div class="lg:col-span-7 bg-[#0b0f19] border border-slate-800 rounded-lg p-8 min-h-[350px] flex flex-col justify-between relative overflow-hidden">
+            
+            <div class="absolute top-0 right-0 p-4">
+              <span class="text-[9px] bg-cyan-950/40 border border-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded uppercase font-mono-custom">
+                PRODUTO ATIVO
+              </span>
+            </div>
+
+            <div class="space-y-6 z-10">
+              <div class="space-y-2">
+                <span class="text-[10px] tracking-widest text-slate-500 uppercase font-mono-custom">
+                  // Seleção Atual
+                </span>
+
+                <h3 id="detail-title" class="text-3xl font-editorial font-bold text-white uppercase tracking-wide"></h3>
+
+                <span id="detail-badge" class="inline-block px-3 py-1 bg-slate-900 border border-slate-700 rounded text-[10px] text-cyan-400 uppercase tracking-widest font-mono-custom"></span>
+              </div>
+
+              <p id="detail-desc" class="text-slate-300 text-sm leading-relaxed"></p>
+            </div>
+
+            <i data-lucide="cpu" class="absolute -bottom-10 -right-10 w-64 h-64 text-slate-900/30 -z-0"></i>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="border-t border-slate-900 bg-[#060913] py-10 px-4 mt-auto">
+      <div class="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
+
+        <div class="space-y-1 text-center lg:text-left">
+          <span class="font-editorial text-lg font-bold tracking-wider text-white">
+            GALERA DO TI
+          </span>
+
+          <p class="text-[9px] font-mono-custom text-slate-500 uppercase tracking-widest">
+            SE TEM CÓDIGO, TEM SOLUÇÃO.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <a href="https://wa.me/5519991918817" target="_blank" class="group flex flex-col items-center justify-center space-y-1">
+            <span class="text-[10px] font-mono-custom text-slate-500 uppercase tracking-widest group-hover:text-green-400 transition-colors">
+              FUNDADORA YANCA RIVSKA
+            </span>
+
+            <div class="flex items-center space-x-2 text-white group-hover:text-green-400 transition-colors">
+              <i data-lucide="smartphone" class="w-4 h-4"></i>
+              <span class="text-sm font-bold font-mono-custom">
+                (19) 99191-8817
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="text-[10px] font-mono-custom text-slate-600">
+          &copy; 2026 GALERA DO TI. TODOS OS DIREITOS RESERVADOS.
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

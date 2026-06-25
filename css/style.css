@@ -1,7 +1,9 @@
 /* =========================================
    Typography & Base Settings
    ========================================= */
-body {
+import 
+
+   body {
   font-family: 'Inter', sans-serif;
 }
 .font-editorial {
