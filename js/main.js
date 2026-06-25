@@ -16,7 +16,6 @@ const groupsData = {
 
 const teamMembers = [
   { name: "Yanca Rivska", role: "Fundadora", img: "img/yanca.jpg" },
-  { name: "Davi Fonseca", role: "Co-fundador", img: "img/davi.jpg" },
   { name: "Karolina Gusmão", role: "Administradora", img: "img/karol.jpg" },
   { name: "Beatriz Soares", role: "Administradora", img: "img/beatriz.jpg" },
   { name: "Gabriel Felipe", role: "Administrador", img: "img/gabrielfelipe.jpg" },

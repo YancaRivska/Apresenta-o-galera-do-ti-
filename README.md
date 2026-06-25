@@ -1,5 +1,5 @@
 
-⚡ GALERA DO TI - teste
+⚡ GALERA DO TI
 
 "If there is code, there is a solution. If not, we build it."
 
