@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as variables;
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: variables.$color-background;
+  color: variables.$color-text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+main {
+  min-height: calc(100vh - 160px);
+}
+
+.page-section {
+  padding-block: variables.$spacing-extra-large;
+}
+
+.section-title {
+  margin-bottom: variables.$spacing-large;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}

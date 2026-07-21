@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as variables;
+
+.card {
+  padding: variables.$spacing-large;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-medium;
+  background-color: variables.$color-surface;
+}

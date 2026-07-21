@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.home-hero {
+  display: grid;
+  align-items: center;
+  gap: variables.$spacing-large;
+  padding-block: variables.$spacing-extra-large;
+
+  @include mixins.desktop {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+  }
+
+  p {
+    margin-top: variables.$spacing-medium;
+    color: variables.$color-text-muted;
+    line-height: 1.7;
+  }
+}

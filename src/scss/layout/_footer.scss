@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.site-footer {
+  padding-block: variables.$spacing-large;
+  border-top: 1px solid variables.$color-border;
+  background-color: variables.$color-surface;
+
+  &__content {
+    display: grid;
+    gap: variables.$spacing-large;
+
+    @include mixins.desktop {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  p {
+    margin-top: variables.$spacing-small;
+    color: variables.$color-text-muted;
+    line-height: 1.6;
+  }
+
+  &__links {
+    display: grid;
+    gap: variables.$spacing-small;
+
+    a:hover {
+      color: variables.$color-primary;
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / -1;
+  }
+}

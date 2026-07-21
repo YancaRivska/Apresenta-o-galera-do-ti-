@@ -1,0 +1,95 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid variables.$color-border;
+  background-color: rgba(6, 9, 19, 0.95);
+  backdrop-filter: blur(12px);
+
+  &__content {
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    justify-content: space-between;
+    gap: variables.$spacing-medium;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: variables.$spacing-medium;
+  }
+
+  &__logo {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid variables.$color-primary;
+    border-radius: variables.$border-radius-small;
+    color: variables.$color-primary;
+    font-family: variables.$font-code;
+    font-weight: 700;
+  }
+
+  &__identity {
+    display: grid;
+    gap: 0.125rem;
+
+    strong {
+      text-transform: uppercase;
+    }
+
+    small {
+      color: variables.$color-text-muted;
+    }
+  }
+
+  &__menu-button {
+    padding: 0.625rem 1rem;
+    border: 1px solid variables.$color-primary;
+    border-radius: variables.$border-radius-small;
+    background: transparent;
+    color: variables.$color-primary;
+
+    @include mixins.desktop {
+      display: none;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 72px;
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    padding: variables.$spacing-medium;
+    border: 1px solid variables.$color-border;
+    border-radius: variables.$border-radius-medium;
+    background: variables.$color-surface;
+
+    &.is-open {
+      display: grid;
+      gap: variables.$spacing-medium;
+    }
+
+    @include mixins.desktop {
+      position: static;
+      display: flex;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      gap: variables.$spacing-medium;
+    }
+
+    a {
+      color: variables.$color-text-muted;
+      transition: color variables.$transition-default;
+
+      &:hover,
+      &.is-active {
+        color: variables.$color-primary;
+      }
+    }
+  }
+}
