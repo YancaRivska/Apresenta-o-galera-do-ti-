@@ -1,58 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="description"
-    content="Comunidade Galera do TI: tecnologia, colaboração e desenvolvimento profissional."
-  >
+	<meta
+		name="description"
+		content="Comunidade Galera do TI: tecnologia, colaboração e desenvolvimento profissional."
+	>
 
-  <title>Galera do TI | Início</title>
+	<title>Galera do TI | Início</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@700;900&display=swap"
-    rel="stylesheet"
-  >
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@700;900&display=swap"
+		rel="stylesheet"
+	>
 
-  <link rel="stylesheet" href="/dist/css/main.css">
+	<link rel="stylesheet" href="/dist/css/main.css">
 
-  <script src="/src/js/components.js" defer></script>
-  <script src="/src/js/menu.js" defer></script>
-  <script src="/src/js/main.js" defer></script>
+	<script src="/src/js/components.js" defer></script>
+	<script src="/src/js/menu.js" defer></script>
+	<script src="/src/js/main.js" defer></script>
 </head>
 
 <body>
-  <div data-header></div>
+	<div data-header></div>
 
-  <main>
-    <section class="container home-hero">
-      <div>
-        <h1>Comunidade Galera do TI</h1>
+	<main>
+		<section class="container home-hero">
+			<div class="banner-container">
+	      <img
+		      src="assets/images/banner/banner-inicio.jpg"
+		      alt="Comunidade Galera do TI"
+		      class="banner-img"
+	      >
+      </div>
+		</section>
+		<section class="container home-introduction">
+  <div class="home-introduction__content">
+    <span class="home-introduction__eyebrow">
+      Apenas 1 mês de existência — crescimento exponencial
+    </span>
 
-        <p>
-          Um ecossistema criado para conectar, desenvolver e fortalecer
-          profissionais de tecnologia.
-        </p>
+    <h1>
+      Comunidade
+      <span>Galera do TI</span>
+    </h1>
 
-        <a href="/pages/ecossistema.html" class="button">
-          Conheça o ecossistema
-        </a>
+    <p>
+      A gente criou o que realmente faltava no mundo da tecnologia:
+      um ecossistema real de jovens tech onde se pode pedir ajuda sem
+      vergonha, sem ego corporativo e sem falsas mentiras do mercado.
+      Nós unimos a nova geração de ponta a ponta.
+    </p>
+
+    <blockquote>
+      “Se tem código, tem solução. Se não tem, a gente cria!”
+    </blockquote>
+  </div>
+
+  <aside
+    class="home-statistics"
+    aria-label="Indicadores da comunidade"
+  >
+    <div class="home-statistics__header">
+      <div class="home-statistics__circles" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="banner">
-        <img
-          src="assets/images/banner/banner-inicio.jpg"
-          alt="Comunidade Galera do TI"
-        >
-      </div>
-    </section>
-  </main>
+      <small>TI_CORE_STATISTICS.TXT</small>
+    </div>
 
-  <div data-footer></div>
+    <div class="home-statistics__item">
+      <span class="home-statistics__label">
+        // Membros ativos
+      </span>
+
+      <div class="home-statistics__value">
+        <strong>2.000+</strong>
+        <small>WhatsApp / Discord</small>
+      </div>
+
+      <div class="home-statistics__progress">
+        <span></span>
+      </div>
+    </div>
+
+    <div class="home-statistics__item">
+      <span class="home-statistics__label">
+        // Visualizações no Instagram
+      </span>
+
+      <div class="home-statistics__value">
+        <strong>100.000+</strong>
+        <small>100% orgânico</small>
+      </div>
+
+      <div
+        class="home-statistics__progress home-statistics__progress--secondary"
+      >
+        <span></span>
+      </div>
+    </div>
+  </aside>
+</section>
+	</main>
+
+	<div data-footer></div>
 </body>
 </html>

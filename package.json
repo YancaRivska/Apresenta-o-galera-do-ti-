@@ -4,13 +4,12 @@
 	"description": "⚡ GALERA DO TI",
 	"main": "index.js",
 	"scripts": {
-		"sass:build": "sass src/scss/main.scss dist/css/main.css --style=expanded --no-source-map",
-	  "sass:watch": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded",
-	  "serve": "live-server --port=5500 --open=index.html",
-	  "dev": "concurrently \"npm run sass:watch\" \"npm run serve\"",
-	  "build": "sass src/scss/main.scss dist/css/main.css --style=compressed --no-source-map",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
+        "sass:build": "sass src/scss/main.scss dist/css/main.css --style=expanded --no-source-map",
+        "sass:watch": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded",
+        "serve": "live-server --port=5500 --open=index.html",
+        "dev": "concurrently \"npm run sass:watch\" \"npm run serve\"",
+        "build": "sass src/scss/main.scss dist/css/main.css --style=compressed --no-source-map"
+},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/YancaRivska/Apresenta-o-galera-do-ti-.git"
