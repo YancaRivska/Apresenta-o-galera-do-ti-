@@ -1,24 +1,25 @@
 @use "breakpoints" as breakpoints;
 
+
 @mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 @mixin container {
-  width: min(100% - 2rem, 1280px);
-  margin-inline: auto;
+	width: min(100% - 2rem, 1280px);
+	margin-inline: auto;
 }
 
 @mixin tablet {
-  @media (min-width: breakpoints.$tablet) {
-    @content;
-  }
+	@media (min-width: breakpoints.$tablet) {
+		@content;
+	}
 }
 
 @mixin desktop {
-  @media (min-width: breakpoints.$desktop) {
-    @content;
-  }
+	@media (min-width: breakpoints.$desktop) {
+		@content;
+	}
 }
