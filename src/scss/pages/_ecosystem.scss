@@ -1,0 +1,397 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.ecosystem-page {
+  padding-bottom: 5rem;
+}
+
+.ecosystem-banner {
+  padding-top: 2rem;
+
+  .banner-img {
+    width: 100%;
+    aspect-ratio: 16 / 7.5;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.ecosystem-groups {
+  padding-top: 3rem;
+
+  &__heading {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+
+    > span {
+      color: variables.$color-secondary;
+      font-family: variables.$font-code;
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-top: 0.75rem;
+      color: variables.$color-white;
+      font-family: variables.$font-editorial;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 620px;
+      margin: 0.75rem auto 0;
+      color: variables.$color-text-muted;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+.ecosystem-explorer {
+  display: grid;
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @include mixins.desktop {
+    grid-template-columns:
+      minmax(300px, 0.85fr)
+      minmax(0, 1.25fr);
+  }
+
+  &__navigation {
+    display: grid;
+    align-content: start;
+    gap: 0.5rem;
+  }
+}
+
+.ecosystem-group {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  min-height: 64px;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-medium;
+  background: variables.$color-surface;
+  color: variables.$color-text;
+  text-align: left;
+  align-items: center;
+  gap: 0.75rem;
+  transition:
+    border-color variables.$transition-default,
+    background-color variables.$transition-default,
+    transform variables.$transition-default;
+
+  &:hover {
+    border-color: rgba(6, 182, 212, 0.45);
+    background: rgba(6, 182, 212, 0.035);
+    transform: translateX(4px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid variables.$color-primary;
+    outline-offset: 2px;
+  }
+
+  &.is-active {
+    border-color: variables.$color-primary;
+    background: rgba(6, 182, 212, 0.07);
+
+    .ecosystem-group__icon {
+      background: rgba(6, 182, 212, 0.12);
+      color: variables.$color-primary;
+      box-shadow: 0 0 18px rgba(6, 182, 212, 0.1);
+    }
+
+    .ecosystem-group__arrow {
+      color: variables.$color-primary;
+    }
+  }
+
+  &__icon {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    border-radius: variables.$border-radius-small;
+    background: rgba(6, 182, 212, 0.07);
+    color: variables.$color-primary;
+    font-size: 1rem;
+    place-items: center;
+  }
+
+  &__name {
+    font-family: variables.$font-code;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  &__arrow {
+    color: variables.$color-text-muted;
+    font-size: 1.2rem;
+  }
+}
+
+.ecosystem-detail {
+  position: relative;
+  min-height: 390px;
+  padding: 2rem;
+  overflow: hidden;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-medium;
+  background: linear-gradient(
+    145deg,
+    rgba(11, 15, 25, 0.98),
+    rgba(6, 9, 19, 0.98)
+  );
+
+  &::before {
+    position: absolute;
+    top: 5rem;
+    bottom: 5rem;
+    left: 0;
+    width: 3px;
+    background: variables.$color-primary;
+    content: "";
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.4);
+  }
+
+  &.is-changing {
+    animation: ecosystem-detail-change 350ms ease;
+  }
+
+  &__status {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    span {
+      color: variables.$color-text-muted;
+      font-family: variables.$font-code;
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    strong {
+      padding: 0.25rem 0.5rem;
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      border-radius: 2px;
+      color: variables.$color-primary;
+      font-family: variables.$font-code;
+      font-size: 0.45rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    margin-top: 2rem;
+    border-radius: variables.$border-radius-medium;
+    background: rgba(6, 182, 212, 0.1);
+    color: variables.$color-primary;
+    font-size: 1.25rem;
+    place-items: center;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    max-width: 85%;
+    margin-top: 1rem;
+    color: variables.$color-white;
+    font-family: variables.$font-editorial;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  &__tag {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    margin-top: 0.75rem;
+    padding: 0.35rem 0.625rem;
+    border: 1px solid rgba(6, 182, 212, 0.35);
+    color: variables.$color-primary;
+    font-family: variables.$font-code;
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  p {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin-top: 1.5rem;
+    color: variables.$color-text-muted;
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+
+  &__features {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      color: variables.$color-text;
+      font-family: variables.$font-code;
+      font-size: 0.625rem;
+
+      &::before {
+        margin-right: 0.5rem;
+        color: variables.$color-primary;
+        content: ">";
+      }
+    }
+  }
+
+  &__background-icon {
+    position: absolute;
+    right: 2rem;
+    bottom: 0.5rem;
+    color: variables.$color-primary;
+    font-size: 8rem;
+    opacity: 0.025;
+    pointer-events: none;
+  }
+}
+
+.ecosystem-connection {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-medium;
+  background: variables.$color-surface;
+
+  @include mixins.desktop {
+    grid-template-columns: 1fr auto;
+  }
+
+  &__content {
+    > span {
+      color: variables.$color-primary;
+      font-family: variables.$font-code;
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      margin-top: 0.5rem;
+      color: variables.$color-white;
+      font-family: variables.$font-editorial;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 760px;
+      margin-top: 0.75rem;
+      color: variables.$color-text-muted;
+      font-size: 0.825rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+@keyframes ecosystem-detail-change {
+  from {
+    opacity: 0.7;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .ecosystem-page {
+    padding-bottom: 3rem;
+  }
+
+  .ecosystem-banner {
+    padding-top: 1rem;
+
+    .banner-img {
+      min-height: 250px;
+      aspect-ratio: auto;
+    }
+  }
+
+  .ecosystem-groups {
+    padding-top: 2.5rem;
+  }
+
+  .ecosystem-explorer {
+    margin-top: 2rem;
+  }
+
+  .ecosystem-group {
+    grid-template-columns: 38px 1fr auto;
+
+    &__name {
+      font-size: 0.6rem;
+    }
+  }
+
+  .ecosystem-detail {
+    min-height: auto;
+    padding: 1.5rem;
+
+    h2 {
+      max-width: 100%;
+    }
+
+    &__status {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &__background-icon {
+      font-size: 5rem;
+    }
+  }
+
+  .ecosystem-connection {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecosystem-group,
+  .ecosystem-detail {
+    animation: none;
+    transition: none;
+  }
+
+  .ecosystem-group:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,212 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.home-page {
+  padding-bottom: 5rem;
+}
+
+.home-introduction {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  padding-block: 3rem 5rem;
+
+  @include mixins.desktop {
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+  }
+
+  &__content {
+    max-width: 760px;
+
+    h1 {
+      margin-top: 1.25rem;
+      color: variables.$color-white;
+      font-family: variables.$font-editorial;
+      font-size: clamp(2.75rem, 5vw, 4.5rem);
+      line-height: 0.92;
+      text-transform: uppercase;
+
+      span {
+        display: block;
+        color: transparent;
+        background: linear-gradient(
+          90deg,
+          variables.$color-primary,
+          variables.$color-secondary
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+    }
+
+    p {
+      max-width: 700px;
+      margin-top: 1.5rem;
+      color: variables.$color-text-muted;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    blockquote {
+      margin: 1.5rem 0 0;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid variables.$color-primary;
+      background: rgba(255, 255, 255, 0.025);
+      color: variables.$color-text;
+      font-family: variables.$font-editorial;
+      font-size: 0.875rem;
+      font-style: italic;
+    }
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    border-radius: variables.$border-radius-small;
+    color: variables.$color-primary;
+    font-family: variables.$font-code;
+    font-size: 0.625rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    &::before {
+      width: 0.4rem;
+      height: 0.4rem;
+      margin-right: 0.4rem;
+      border-radius: 50%;
+      background: variables.$color-primary;
+      content: "";
+    }
+  }
+}
+
+.home-statistics {
+  padding: 1.5rem;
+  border: 1px solid variables.$color-border;
+  border-radius: variables.$border-radius-medium;
+  background: variables.$color-surface;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid variables.$color-border;
+
+    small {
+      color: variables.$color-text-muted;
+      font-family: variables.$font-code;
+      font-size: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  &__circles {
+    display: flex;
+    gap: 0.35rem;
+
+    span {
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 50%;
+
+      &:nth-child(1) {
+        background: #ff5f56;
+      }
+
+      &:nth-child(2) {
+        background: #ffbd2e;
+      }
+
+      &:nth-child(3) {
+        background: #27c93f;
+      }
+    }
+  }
+
+  &__item {
+    padding-top: 1.5rem;
+
+    & + & {
+      margin-top: 1.5rem;
+      border-top: 1px solid variables.$color-border;
+    }
+  }
+
+  &__label {
+    color: variables.$color-text-muted;
+    font-family: variables.$font-code;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.5rem;
+
+    strong {
+      color: variables.$color-white;
+      font-family: variables.$font-editorial;
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
+    }
+
+    small {
+      color: variables.$color-primary;
+      font-family: variables.$font-code;
+      font-size: 0.6rem;
+      text-align: right;
+    }
+  }
+
+  &__progress {
+    height: 4px;
+    margin-top: 0.75rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: variables.$color-border;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: variables.$color-primary;
+    }
+
+    &--secondary span {
+      background: variables.$color-secondary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .home-introduction {
+    gap: 2rem;
+    padding-block: 2rem 3rem;
+
+    &__content {
+      h1 {
+        font-size: clamp(2.5rem, 13vw, 4rem);
+      }
+
+      p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .home-statistics__value {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    small {
+      text-align: left;
+    }
+  }
+}

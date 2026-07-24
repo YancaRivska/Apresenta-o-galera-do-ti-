@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Conheça os grupos, projetos e iniciativas que formam o ecossistema da comunidade Galera do TI."
+  >
+
+  <title>Galera do TI | Ecossistema</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/dist/css/main.css">
+
+  <script src="/src/js/components.js" defer></script>
+  <script src="/src/js/menu.js" defer></script>
+  <script src="/src/js/main.js" defer></script>
+  <script src="/src/js/ecosystem.js" defer></script>
+</head>
+
+<body>
+  <div data-header></div>
+
+  <main class="ecosystem-page">
+    <section
+      class="container ecosystem-banner"
+      aria-label="Apresentação do ecossistema"
+    >
+      <div class="banner-container">
+        <img
+          class="banner-img"
+          src="/assets/images/banner/banner-eco.jpg"
+          alt="Ecossistema da comunidade Galera do TI"
+        >
+      </div>
+    </section>
+
+    <section class="container ecosystem-groups">
+      <header class="ecosystem-groups__heading">
+        <span>A rede conectada</span>
+
+        <h1>Grupos Temáticos</h1>
+
+        <p>
+          Conheça os espaços que conectam os membros da Galera do TI.
+          Selecione um grupo para conferir sua proposta e suas principais
+          iniciativas.
+        </p>
+      </header>
+
+      <div class="ecosystem-explorer">
+        <div
+          class="ecosystem-explorer__navigation"
+          role="tablist"
+          aria-label="Grupos temáticos da comunidade"
+        >
+          <button
+            id="ecosystem-tab-taberna"
+            class="ecosystem-group is-active"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="ecosystem-detail"
+            tabindex="0"
+            data-group="taberna"
+          >
+            <span class="ecosystem-group__icon" aria-hidden="true">
+              ☕
+            </span>
+
+            <span class="ecosystem-group__name">
+              Taberna | Bar da T.I
+            </span>
+
+            <span class="ecosystem-group__arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+
+          <button
+            id="ecosystem-tab-laboratorio"
+            class="ecosystem-group"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="ecosystem-detail"
+            tabindex="-1"
+            data-group="laboratorio"
+          >
+            <span class="ecosystem-group__icon" aria-hidden="true">
+              ▱
+            </span>
+
+            <span class="ecosystem-group__name">
+              Laboratório — Criando meu portfólio
+            </span>
+
+            <span class="ecosystem-group__arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+
+          <button
+            id="ecosystem-tab-ti-girls"
+            class="ecosystem-group"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="ecosystem-detail"
+            tabindex="-1"
+            data-group="ti-girls"
+          >
+            <span class="ecosystem-group__icon" aria-hidden="true">
+              ♀
+            </span>
+
+            <span class="ecosystem-group__name">
+              TI Girls — Só para meninas
+            </span>
+
+            <span class="ecosystem-group__arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+
+          <button
+            id="ecosystem-tab-english"
+            class="ecosystem-group"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="ecosystem-detail"
+            tabindex="-1"
+            data-group="english"
+          >
+            <span class="ecosystem-group__icon" aria-hidden="true">
+              ◎
+            </span>
+
+            <span class="ecosystem-group__name">
+              English in Practice
+            </span>
+
+            <span class="ecosystem-group__arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+
+          <button
+            id="ecosystem-tab-tech-fit"
+            class="ecosystem-group"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="ecosystem-detail"
+            tabindex="-1"
+            data-group="tech-fit"
+          >
+            <span class="ecosystem-group__icon" aria-hidden="true">
+              ⚙
+            </span>
+
+            <span class="ecosystem-group__name">
+              Tech Fit Rat | GymRat do TI
+            </span>
+
+            <span class="ecosystem-group__arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+
+          <button
+            id="ecosystem-tab-game-mode"
+            class="ecosystem-group"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="ecosystem-detail"
+            tabindex="-1"
+            data-group="game-mode"
+          >
+            <span class="ecosystem-group__icon" aria-hidden="true">
+              ▣
+            </span>
+
+            <span class="ecosystem-group__name">
+              Game Mode Co-op
+            </span>
+
+            <span class="ecosystem-group__arrow" aria-hidden="true">
+              ›
+            </span>
+          </button>
+        </div>
+
+        <article
+          id="ecosystem-detail"
+          class="ecosystem-detail"
+          role="tabpanel"
+          aria-live="polite"
+          aria-labelledby="ecosystem-tab-taberna"
+        >
+          <div class="ecosystem-detail__status">
+            <span>// Seleção atual</span>
+            <strong>Grupo ativo</strong>
+          </div>
+
+          <span
+            class="ecosystem-detail__icon"
+            data-detail-icon
+            aria-hidden="true"
+          >
+            ☕
+          </span>
+
+          <h2 data-detail-title>
+            Taberna | Bar da T.I
+          </h2>
+
+          <span class="ecosystem-detail__tag" data-detail-tag>
+            Coração da comunidade
+          </span>
+
+          <p data-detail-description>
+            O ponto de encontro informal da comunidade, criado para
+            conversas, troca de experiências, networking e construção
+            de conexões reais entre os membros.
+          </p>
+
+          <ul
+            class="ecosystem-detail__features"
+            data-detail-features
+          >
+            <li>Networking entre membros</li>
+            <li>Troca de experiências</li>
+            <li>Conversas sobre tecnologia e carreira</li>
+          </ul>
+
+          <span
+            class="ecosystem-detail__background-icon"
+            data-detail-background-icon
+            aria-hidden="true"
+          >
+            ☕
+          </span>
+        </article>
+      </div>
+    </section>
+
+    <section class="container ecosystem-connection">
+      <div class="ecosystem-connection__content">
+        <span>COLLABORATION_NETWORK.EXE</span>
+
+        <h2>Um ecossistema construído por pessoas</h2>
+
+        <p>
+          Cada grupo possui seu próprio objetivo, mas todos fazem parte
+          de uma rede criada para compartilhar conhecimento, fortalecer
+          conexões e desenvolver profissionais de tecnologia.
+        </p>
+      </div>
+
+      <a href="/pages/parceria.html" class="button">
+        Faça parte dessa rede
+      </a>
+    </section>
+  </main>
+
+  <div data-footer></div>
+</body>
+</html>

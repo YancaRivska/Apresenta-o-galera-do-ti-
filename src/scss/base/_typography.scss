@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as variables;
+
+body {
+  font-family: variables.$font-primary;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+.font-editorial {
+  font-family: variables.$font-editorial;
+}
+
+.font-code {
+  font-family: variables.$font-code;
+}

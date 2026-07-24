@@ -1,0 +1,30 @@
+{
+	"name": "apresenta-o-galera-do-ti-",
+	"version": "1.0.0",
+	"description": "⚡ GALERA DO TI",
+	"main": "index.js",
+	"scripts": {
+        "sass:build": "sass src/scss/main.scss dist/css/main.css --style=expanded --no-source-map",
+        "sass:watch": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded",
+        "serve": "live-server --port=5500 --open=index.html",
+        "dev": "concurrently \"npm run sass:watch\" \"npm run serve\"",
+        "build": "sass src/scss/main.scss dist/css/main.css --style=compressed --no-source-map"
+},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YancaRivska/Apresenta-o-galera-do-ti-.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/YancaRivska/Apresenta-o-galera-do-ti-/issues"
+	},
+	"homepage": "https://github.com/YancaRivska/Apresenta-o-galera-do-ti-#readme",
+	"devDependencies": {
+		"concurrently": "^10.0.3",
+		"live-server": "^1.2.2",
+		"sass": "^1.101.3"
+	}
+}

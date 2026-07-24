@@ -1,0 +1,100 @@
+@use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
+
+.site-footer {
+  padding-block: 2.25rem;
+  border-top: 1px solid variables.$color-border;
+  background: rgba(6, 9, 19, 0.98);
+
+  &__content {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+
+    @include mixins.desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &__brand {
+    display: grid;
+    gap: 0.25rem;
+
+    strong {
+      color: variables.$color-white;
+      font-family: variables.$font-editorial;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    small {
+      color: rgba(6, 182, 212, 0.65);
+      font-family: variables.$font-code;
+      font-size: 0.45rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+  }
+
+  &__contact {
+    display: grid;
+    gap: 0.4rem;
+
+    > span {
+      color: variables.$color-text-muted;
+      font-family: variables.$font-code;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: fit-content;
+      color: variables.$color-white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      transition: color variables.$transition-default;
+
+      svg {
+        color: variables.$color-primary;
+      }
+
+      &:hover {
+        color: variables.$color-primary;
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    color: variables.$color-text-muted;
+    font-family: variables.$font-code;
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    text-transform: uppercase;
+
+    @include mixins.desktop {
+      text-align: right;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .site-footer {
+    text-align: center;
+
+    &__content,
+    &__contact {
+      justify-items: center;
+    }
+
+    &__copyright {
+      text-align: center;
+    }
+  }
+}

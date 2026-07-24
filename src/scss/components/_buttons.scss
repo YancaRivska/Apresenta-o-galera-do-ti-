@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as variables;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid variables.$color-primary;
+  border-radius: variables.$border-radius-small;
+  background-color: variables.$color-primary;
+  color: variables.$color-background;
+  font-weight: 700;
+  transition:
+    background-color variables.$transition-default,
+    color variables.$transition-default;
+
+  &:hover {
+    background-color: transparent;
+    color: variables.$color-primary;
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: variables.$color-primary;
+  }
+}
