@@ -2,21 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
-	name="description"
-	content="Conheça a missão, a visão e os valores da Galera do TI."
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Galera do TI | Co-fundadores</title>
+  <meta
+    name="description"
+    content="Conheça os cofundadores e administradores responsáveis pela construção da comunidade Galera do TI."
+  >
+
+  <title>Galera do TI | Cofundadores</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@700;900&display=swap"
-	rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap"
+    rel="stylesheet"
   >
 
   <link rel="stylesheet" href="/dist/css/main.css">
@@ -29,27 +33,286 @@
 <body>
   <div data-header></div>
 
-  <main class="mission-page">
-	<section class="container page-section">
-	  <h1 class="section-title">Missão e valores</h1>
+  <!-- Ícones reutilizados nos cards -->
+  <svg
+    width="0"
+    height="0"
+    class="social-icon-definitions"
+    aria-hidden="true"
+  >
+    <defs>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path
+          d="M6 9H2V22H6V9ZM4 2C2.7 2 1.7 3 1.7 4.3C1.7 5.6 2.7 6.6 4 6.6C5.3 6.6 6.3 5.6 6.3 4.3C6.3 3 5.3 2 4 2ZM22 14.5C22 10.6 19.9 8.7 17.1 8.7C14.8 8.7 13.8 10 13.2 10.9V9H9.2V22H13.2V15.6C13.2 13.9 13.5 12.2 15.7 12.2C17.8 12.2 17.8 14.2 17.8 15.7V22H22V14.5Z"
+          fill="currentColor"
+        />
+      </symbol>
 
-	  <div class="mission-page__values">
-		<article class="card">
-		  <h2>Missão</h2>
-		  <p>Conteúdo da missão da comunidade.</p>
-		</article>
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect
+          x="3"
+          y="3"
+          width="18"
+          height="18"
+          rx="5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
 
-		<article class="card">
-		  <h2>Visão</h2>
-		  <p>Conteúdo da visão da comunidade.</p>
-		</article>
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
 
-		<article class="card">
-		  <h2>Valores</h2>
-		  <p>Conteúdo dos valores da comunidade.</p>
-		</article>
-	  </div>
-	</section>
+        <circle
+          cx="17.5"
+          cy="6.5"
+          r="1"
+          fill="currentColor"
+        />
+      </symbol>
+
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          d="M12 2C6.5 2 2 6.6 2 12.2C2 16.7 4.9 20.5 8.8 21.8C9.3 21.9 9.5 21.6 9.5 21.3V19.4C6.7 20 6.1 18.2 6.1 18.2C5.6 17 5 16.7 5 16.7C4.1 16.1 5.1 16.1 5.1 16.1C6.1 16.2 6.6 17.2 6.6 17.2C7.5 18.8 9 18.3 9.6 18C9.7 17.3 10 16.9 10.2 16.7C8 16.4 5.7 15.5 5.7 11.6C5.7 10.5 6.1 9.5 6.7 8.8C6.6 8.5 6.3 7.5 6.8 6.2C6.8 6.2 7.7 5.9 9.5 7.2C10.3 7 11.2 6.9 12 6.9C12.8 6.9 13.7 7 14.5 7.2C16.3 5.9 17.2 6.2 17.2 6.2C17.7 7.5 17.4 8.5 17.3 8.8C17.9 9.5 18.3 10.5 18.3 11.6C18.3 15.5 16 16.4 13.8 16.7C14.2 17 14.5 17.7 14.5 18.7V21.3C14.5 21.6 14.7 21.9 15.2 21.8C19.1 20.5 22 16.7 22 12.2C22 6.6 17.5 2 12 2Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="cofounders-page">
+    <section
+      class="container cofounders-banner"
+      aria-label="Apresentação dos cofundadores"
+    >
+      <div class="banner-container">
+        <img
+          class="banner-img"
+          src="/assets/images/banner/banner-time.jpg"
+          alt="Time responsável pela construção da Galera do TI"
+        >
+      </div>
+    </section>
+
+    <section class="container cofounders-content">
+      <header class="cofounders-content__heading">
+        <span>Construção coletiva</span>
+
+        <h1>Os Cofundadores</h1>
+
+        <p>
+          Conheça as pessoas que participam da organização, do
+          desenvolvimento e da evolução da comunidade Galera do TI.
+        </p>
+      </header>
+
+      <div class="cofounders-content__grid">
+        <!-- Yanca Rivska -->
+        <article class="cofounder-card">
+          <img
+            class="cofounder-card__image"
+            src="/assets/images/cofounders/yanca.jpg"
+            alt="Yanca Rivska"
+            loading="lazy"
+          >
+
+          <h2>Yanca Rivska</h2>
+
+          <span class="cofounder-card__role">
+            Fundadora
+          </span>
+
+          <nav
+            class="cofounder-card__socials"
+            aria-label="Redes sociais de Yanca Rivska"
+          >
+            <a
+              href="https://www.linkedin.com/in/yancarivska/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Yanca Rivska"
+              title="LinkedIn"
+            >
+              <svg width="16" height="16" aria-hidden="true">
+                <use href="#icon-linkedin"></use>
+              </svg>
+            </a>
+          </nav>
+        </article>
+
+        <!-- Karolina Gusmão -->
+        <article class="cofounder-card">
+          <img
+            class="cofounder-card__image"
+            src="/assets/images/cofounders/karol.jpg"
+            alt="Karolina Gusmão"
+            loading="lazy"
+          >
+
+          <h2>Karolina Gusmão</h2>
+
+          <span class="cofounder-card__role">
+            Administradora
+          </span>
+
+          <nav
+            class="cofounder-card__socials"
+            aria-label="Redes sociais de Karolina Gusmão"
+          >
+            <a
+              href="https://www.linkedin.com/in/karolinagusmao"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Karolina Gusmão"
+              title="LinkedIn"
+            >
+              <svg width="16" height="16" aria-hidden="true">
+                <use href="#icon-linkedin"></use>
+              </svg>
+            </a>
+
+            <a
+              href="https://www.instagram.com/karolbbgusmao"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Karolina Gusmão"
+              title="Instagram"
+            >
+              <svg width="16" height="16" aria-hidden="true">
+                <use href="#icon-instagram"></use>
+              </svg>
+            </a>
+
+            <a
+              href="https://github.com/karolinagusmao"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Karolina Gusmão"
+              title="GitHub"
+            >
+              <svg width="16" height="16" aria-hidden="true">
+                <use href="#icon-github"></use>
+              </svg>
+            </a>
+          </nav>
+        </article>
+
+        <!-- Beatriz Soares -->
+        <article class="cofounder-card">
+          <img
+            class="cofounder-card__image"
+            src="/assets/images/cofounders/beatriz.jpg"
+            alt="Beatriz Soares"
+            loading="lazy"
+          >
+
+          <h2>Beatriz Soares</h2>
+
+          <span class="cofounder-card__role">
+            Administradora
+          </span>
+
+          <nav
+            class="cofounder-card__socials"
+            aria-label="Redes sociais de Beatriz Soares"
+          >
+          </nav>
+        </article>
+
+        <!-- Gabriel Felipe -->
+        <article class="cofounder-card">
+          <img
+            class="cofounder-card__image"
+            src="/assets/images/cofounders/gabrielfelipe.jpg"
+            alt="Gabriel Felipe"
+            loading="lazy"
+          >
+
+          <h2>Gabriel Felipe</h2>
+
+          <span class="cofounder-card__role">
+            Administrador
+          </span>
+
+          <nav
+            class="cofounder-card__socials"
+            aria-label="Redes sociais de Gabriel Felipe"
+          >
+          </nav>
+        </article>
+
+        <!-- Gabriel Marques -->
+        <article class="cofounder-card">
+          <img
+            class="cofounder-card__image"
+            src="/assets/images/cofounders/gabrielmarques.jpg"
+            alt="Gabriel Marques"
+            loading="lazy"
+          >
+
+          <h2>Gabriel Marques</h2>
+
+          <span class="cofounder-card__role">
+            Administrador
+          </span>
+
+          <nav
+            class="cofounder-card__socials"
+            aria-label="Redes sociais de Gabriel Marques"
+          >
+            <a
+              href="https://www.linkedin.com/in/dev-gabriel-marques/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Gabriel Marques"
+              title="LinkedIn"
+            >
+              <svg width="16" height="16" aria-hidden="true">
+                <use href="#icon-linkedin"></use>
+              </svg>
+            </a>
+
+            <a
+              href="https://github.com/BielMar-01"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub de Gabriel Marques"
+              title="GitHub"
+            >
+              <svg width="16" height="16" aria-hidden="true">
+                <use href="#icon-github"></use>
+              </svg>
+            </a>
+          </nav>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="container cofounders-message">
+      <div class="cofounders-message__content">
+        <span>COMMUNITY_BUILDERS.EXE</span>
+
+        <h2>Construindo juntos</h2>
+
+        <p>
+          A Galera do TI é construída diariamente por seus
+          cofundadores, administradores, lideranças, embaixadores,
+          moderadores e por todos os membros que compartilham
+          conhecimento e colaboram com as iniciativas.
+        </p>
+      </div>
+
+      <a href="/pages/ecossistema.html" class="button">
+        Conheça o ecossistema
+      </a>
+    </section>
   </main>
 
   <div data-footer></div>
